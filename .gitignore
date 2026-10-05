@@ -1,0 +1,6 @@
+# Ambientes e arquivos temporários
+__pycache__/
+*.pyc
+check_images.py
+.DS_Store
+Thumbs.db

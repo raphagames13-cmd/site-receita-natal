@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renda Extra com Doces de Natal | Guia Prático para Vender neste Fim de Ano</title>
+  <meta name="description" content="Aprenda a fazer e vender doces de Natal irresistíveis e aproveite a melhor época do ano para criar uma renda extra com confeitaria.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Renda Extra com Doces de Natal | Oportunidade Lucrativa">
+  <meta property="og:description" content="25 receitas testadas e aprovadas para faturar com encomendas natalinas neste fim de ano.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Cormorant Garamond (Elegância artesanal de confeitaria) + Plus Jakarta Sans (UI e legibilidade impecável) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '28892065593752419');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=28892065593752419&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- Rastreamento & Atribuição de Tráfego (Trakvio / Adpulse) -->
+  <script>
+  (function () {
+    "use strict";
+    var endpoint = "https://trakvio.vercel.app/api/track/8b6ee7b8-67ac-4e7a-9de4-63691e96d6a6";
+    var namespace = "adpulse:8b6ee7b8-67ac-4e7a-9de4-63691e96d6a6";
+    var visitorKey = namespace + ":visitor_id";
+    var attributionKey = namespace + ":attribution";
+    var runKey = "__adpulse_" + "8b6ee7b8_67ac_4e7a_9de4_63691e96d6a6";
+    var attributionKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "fbclid", "gclid"];
+
+    if (window[runKey]) return;
+    window[runKey] = true;
+
+    function uuid() {
+      if (window.crypto && typeof window.crypto.randomUUID === "function") return window.crypto.randomUUID();
+      return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, function (c) {
+        return (Number(c) ^ (window.crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (Number(c) / 4)))).toString(16);
+      });
+    }
+
+    function read(key) {
+      try { return window.localStorage.getItem(key); } catch (_) { return null; }
+    }
+
+    function write(key, value) {
+      try { window.localStorage.setItem(key, value); } catch (_) {}
+    }
+
+    function cleanUrl(value) {
+      try {
+        var url = new URL(value);
+        if (url.protocol !== "http:" && url.protocol !== "https:") return null;
+        url.hash = "";
+        url.username = "";
+        url.password = "";
+        return url.toString();
+      } catch (_) { return null; }
+    }
+
+    var visitorId = read(visitorKey);
+    if (!/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(visitorId || "")) {
+      visitorId = uuid();
+      write(visitorKey, visitorId);
+    }
+
+    var pageUrl = new URL(window.location.href);
+    var captured = {};
+    var hasAttribution = false;
+    attributionKeys.forEach(function (key) {
+      var value = pageUrl.searchParams.get(key);
+      captured[key] = value && value.trim() ? value.trim() : null;
+      if (captured[key] !== null) hasAttribution = true;
+    });
+    if (hasAttribution) write(attributionKey, JSON.stringify(captured));
+
+    var saved = captured;
+    try {
+      var stored = JSON.parse(read(attributionKey) || "null");
+      if (stored && typeof stored === "object") saved = stored;
+    } catch (_) {}
+
+    function addTrackingToCheckout(link) {
+      try {
+        if (!link || !link.href) return;
+        var url = new URL(link.href, window.location.href);
+        if (url.hostname === "pay.cakto.com.br") {
+          attributionKeys.forEach(function (key) {
+            if (saved[key] !== null && typeof saved[key] === "string") url.searchParams.set(key, saved[key]);
+          });
+          url.searchParams.set("sck", visitorId);
+        } else if (url.hostname === "checkout.wiven.com.br") {
+          attributionKeys.forEach(function (key) {
+            if (!url.searchParams.has(key) && saved[key] !== null && typeof saved[key] === "string") url.searchParams.set(key, saved[key]);
+          });
+          url.searchParams.set("adp_vid", visitorId);
+        } else return;
+        link.href = url.toString();
+      } catch (_) {}
+    }
+
+    function scanLinks() {
+      try {
+        document.querySelectorAll('a[href*="pay.cakto.com.br"],a[href*="checkout.wiven.com.br"]').forEach(addTrackingToCheckout);
+      } catch (_) {}
+    }
+
+    scanLinks();
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", scanLinks);
+    }
+    if (typeof window.MutationObserver === "function" && document.documentElement) {
+      try {
+        var observer = new MutationObserver(function () { scanLinks(); });
+        observer.observe(document.documentElement, { childList: true, subtree: true });
+      } catch (_) {}
+    }
+
+    function handleInteraction(event) {
+      var target = event.target instanceof Element ? event.target.closest("a") : null;
+      if (target) addTrackingToCheckout(target);
+    }
+
+    document.addEventListener("pointerdown", handleInteraction, true);
+    document.addEventListener("touchstart", handleInteraction, true);
+    document.addEventListener("click", handleInteraction, true);
+
+    var landingPage = cleanUrl(window.location.href);
+    if (!landingPage) return;
+    var payload = Object.assign({}, captured, {
+      event_id: uuid(),
+      visitor_id: visitorId,
+      landing_page: landingPage,
+      referrer: document.referrer ? cleanUrl(document.referrer) : null
+    });
+
+    fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+      keepalive: true
+    }).catch(function () {});
+  })();
+  </script>
+</head>
+<body>
+
+  <!-- Top Festive Ribbon -->
+  <div class="top-announcement">
+    <div class="container announcement-content">
+      <span class="festive-icon">🎄</span>
+      <span>Aproveite o período do Natal para lucrar com doces artesanais</span>
+      <span class="festive-icon">✨</span>
+    </div>
+  </div>
+
+  <!-- 1. HERO SECTION -->
+  <header class="section-hero">
+    <div class="container hero-container">
+      
+      <!-- Festive Badge -->
+      <div class="hero-badge">
+        <span class="badge-pine">🌿</span>
+        <span>Temporada Natalina • Oportunidade de Vendas</span>
+        <span class="badge-pine">🌿</span>
+      </div>
+
+      <!-- Headline clara, forte e objetiva -->
+      <h1 class="hero-title">
+        Faça do Natal a Sua Maior Oportunidade de <span class="highlight-bordeaux">Renda Extra</span> Vendendo <span class="highlight-gold">Doces Natalinos</span>
+      </h1>
+
+      <!-- Subheadline sem enrolação -->
+      <p class="hero-subtitle">
+        Aprenda receitas selecionadas para a época do Natal, monte seu cardápio de encomendas e comece a vender no período mais lucrativo do ano para a confeitaria.
+      </p>
+
+      <!-- Carrossel de Apresentação do Produto Real (As 3 Imagens Oficiais) -->
+      <div class="hero-carousel-wrapper">
+        <button class="hero-carousel-btn prev" id="hero-carousel-prev" aria-label="Imagem anterior">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+
+        <div class="hero-carousel-viewport" id="hero-carousel-viewport">
+          <div class="hero-carousel-track" id="hero-carousel-track">
+            <!-- Slide 1: Trufas de Panetone -->
+            <div class="hero-carousel-slide">
+              <img src="assets/receita-12-trufas.png" alt="Apostila Digital — Receita 12: Trufas de Panetone Artesanal" class="hero-carousel-img" loading="eager">
+            </div>
+            <!-- Slide 2: Banoffee Natalina -->
+            <div class="hero-carousel-slide">
+              <img src="assets/receita-17-banoffee.png" alt="Apostila Digital — Receita 17: Banoffee Natalina com Toque de Especiarias" class="hero-carousel-img" loading="eager">
+            </div>
+            <!-- Slide 3: Kit Ceia Completa -->
+            <div class="hero-carousel-slide">
+              <img src="assets/receita-25-kit-ceia.png" alt="Apostila Digital — Receita 25: Kit Especial Ceia de Natal Completa" class="hero-carousel-img" loading="eager">
+            </div>
+          </div>
+        </div>
+
+        <button class="hero-carousel-btn next" id="hero-carousel-next" aria-label="Próxima imagem">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+
+      <!-- Indicadores do Carrossel Hero -->
+      <div class="hero-carousel-indicators" id="hero-carousel-indicators">
+        <span class="hero-indicator active" data-index="0"></span>
+        <span class="hero-indicator" data-index="1"></span>
+        <span class="hero-indicator" data-index="2"></span>
+      </div>
+
+      <!-- Hero CTA & Bônus Logo Abaixo do Carrossel -->
+      <div class="hero-cta-box">
+        <a href="https://pay.cakto.com.br/vpncfgw_1176779" class="btn-primary cta-btn pulse-effect" id="cta-hero">
+          <span>QUERO COMEÇAR MINHA RENDA EXTRA NO NATAL</span>
+          <svg class="btn-arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Bloco Compacto: VOCÊ TAMBÉM RECEBE 4 BÔNUS (Logo abaixo do botão) -->
+        <div class="hero-bonuses-compact">
+          <div class="hero-bonuses-header">
+            <span class="bonus-header-icon">🎁</span>
+            <span class="bonus-header-title">VOCÊ TAMBÉM RECEBE 4 BÔNUS</span>
+            <span class="bonus-header-pill">INCLUSOS</span>
+          </div>
+
+          <div class="hero-bonuses-grid">
+            <!-- Bônus 1 -->
+            <div class="hero-bonus-chip">
+              <span class="chip-icon">🎁</span>
+              <div class="chip-text">
+                <strong class="chip-title">Bônus 1 — Kit de Divulgação</strong>
+                <span class="chip-desc">Textos prontos para WhatsApp, Instagram e Stories</span>
+              </div>
+            </div>
+
+            <!-- Bônus 2 -->
+            <div class="hero-bonus-chip">
+              <span class="chip-icon">🎄</span>
+              <div class="chip-text">
+                <strong class="chip-title">Bônus 2 — Kit de Cardápios de Natal</strong>
+                <span class="chip-desc">Modelos de cardápios prontos para apresentar seus produtos</span>
+              </div>
+            </div>
+
+            <!-- Bônus 3 -->
+            <div class="hero-bonus-chip">
+              <span class="chip-icon">🛒</span>
+              <div class="chip-text">
+                <strong class="chip-title">Bônus 3 — Lista de Compras para Produção</strong>
+                <span class="chip-desc">Checklist de ingredientes, embalagens e materiais</span>
+              </div>
+            </div>
+
+            <!-- Bônus 4 -->
+            <div class="hero-bonus-chip">
+              <span class="chip-icon">💰</span>
+              <div class="chip-text">
+                <strong class="chip-title">Bônus 4 — Guia de Precificação</strong>
+                <span class="chip-desc">Aprenda a calcular custos e definir preços de venda</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selos de Confiança: Imediato, Vitalício, Garantia -->
+        <div class="hero-trust-badges">
+          <div class="trust-item">
+            <span class="trust-symbol">⚡</span>
+            <span>Acesso Imediato</span>
+          </div>
+          <span class="trust-separator">•</span>
+          <div class="trust-item">
+            <span class="trust-symbol">🔒</span>
+            <span>Acesso Vitalício</span>
+          </div>
+          <span class="trust-separator">•</span>
+          <div class="trust-item">
+            <span class="trust-symbol">🛡️</span>
+            <span>7 Dias de Garantia</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 1. DOR / PROBLEMA (Visual, Humanizada e Envolvente) -->
+  <section class="section-pain" id="desafios">
+    <div class="container">
+      <div class="text-center">
+        <div class="festive-divider">
+          <span class="line"></span>
+          <span class="foliage-symbol">❦</span>
+          <span class="line"></span>
+        </div>
+        <div class="section-tag section-tag-pain">Dificuldades Comuns</div>
+        <h2 class="section-title">Quer aproveitar o Natal para fazer uma renda extra, mas não sabe por onde começar?</h2>
+      </div>
+
+      <!-- Imagem Grande e Realista da Situação -->
+      <div class="pain-hero-image-wrapper">
+        <div class="pain-image-frame">
+          <img src="assets/planejamento-natal-dor.jpg" alt="Confeiteira planejando sua produção de doces para o Natal" class="pain-real-img" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Problemas Listados -->
+      <div class="pain-items-list">
+        <div class="pain-item">
+          <div class="pain-dot">❌</div>
+          <div class="pain-content">
+            <h4 class="pain-head">Não sabe exatamente o que vender</h4>
+          </div>
+        </div>
+
+        <div class="pain-item">
+          <div class="pain-dot">❌</div>
+          <div class="pain-content">
+            <h4 class="pain-head">Tem medo de errar nas receitas</h4>
+          </div>
+        </div>
+
+        <div class="pain-item">
+          <div class="pain-dot">❌</div>
+          <div class="pain-content">
+            <h4 class="pain-head">Não sabe quanto cobrar</h4>
+          </div>
+        </div>
+
+        <div class="pain-item">
+          <div class="pain-dot">❌</div>
+          <div class="pain-content">
+            <h4 class="pain-head">Não sabe como montar um cardápio</h4>
+          </div>
+        </div>
+
+        <div class="pain-item pain-item-highlight">
+          <div class="pain-dot">❌</div>
+          <div class="pain-content">
+            <h4 class="pain-head">Não sabe como divulgar seus doces</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SOLUÇÃO (Visual, acolhedora, sem clichês vazios) -->
+  <section class="section-solution" id="solucao">
+    <div class="container">
+      <div class="text-center">
+        <div class="festive-divider festive-divider-light">
+          <span class="line"></span>
+          <span class="foliage-symbol">❦</span>
+          <span class="line"></span>
+        </div>
+        <div class="section-tag section-tag-light">A Solução Para o Seu Natal</div>
+        <h2 class="section-title">O Ponto de Partida Que Você Precisava</h2>
+        <p class="section-subtitle">
+          O <strong>Renda Extra com Doces de Natal</strong> reúne receitas selecionadas e o direcionamento necessário para você se preparar e começar a vender com tranquilidade.
+        </p>
+      </div>
+
+      <div class="solution-grid">
+        <div class="solution-card">
+          <div class="solution-icon-box">🍰</div>
+          <h3 class="solution-card-title">Receitas Testadas Para o Natal</h3>
+          <p class="solution-card-desc">
+            Você prepara doces com a certeza do sabor e da apresentação natalina que encantam qualquer pessoa logo no primeiro olhar.
+          </p>
+        </div>
+
+        <div class="solution-card">
+          <div class="solution-icon-box">🎄</div>
+          <h3 class="solution-card-title">Cardápio Natalino Descomplicado</h3>
+          <p class="solution-card-desc">
+            Sem receitas complicadas demais. Uma seleção pensada para quem quer produzir de casa e atender seus clientes com facilidade.
+          </p>
+        </div>
+
+        <div class="solution-card">
+          <div class="solution-icon-box">📦</div>
+          <h3 class="solution-card-title">Organização da Sua Produção</h3>
+          <p class="solution-card-desc">
+            Entenda como se preparar com antecedência para não ficar sobrecarregada na semana do Natal.
+          </p>
+        </div>
+
+        <div class="solution-card">
+          <div class="solution-icon-box">💰</div>
+          <h3 class="solution-card-title">Doces Prontos Para Virar Renda</h3>
+          <p class="solution-card-desc">
+            Tudo pensado para transformar a sua dedicação na cozinha em uma renda extra de verdade no período mais especial do ano.
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA Solução -->
+      <div class="section-cta-box text-center">
+        <a href="https://pay.cakto.com.br/vpncfgw_1176779" class="btn-primary cta-btn" id="cta-solution">
+          <span>QUERO COMEÇAR A VENDER DOCES DE NATAL</span>
+          <svg class="btn-arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <p class="cta-subtext cta-subtext-light">Acesso 100% digital • Comece a se preparar hoje mesmo</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. O CONTEÚDO FEITO PARA SUA PRODUÇÃO (25 Receitas + Bônus) -->
+  <section class="section-content" id="conteudo">
+    <div class="container">
+      <div class="text-center">
+        <div class="festive-divider">
+          <span class="line"></span>
+          <span class="foliage-symbol">❦</span>
+          <span class="line"></span>
+        </div>
+        <div class="section-tag">O Que Você Recebe</div>
+        <h2 class="section-title">O Conteúdo Feito Para a Sua Produção</h2>
+        <p class="section-subtitle">
+          Tudo o que você precisa para preparar os doces mais pedidos do Natal com segurança e excelente apresentação.
+        </p>
+      </div>
+
+      <!-- Card Principal: 25 Receitas de Doces de Natal -->
+      <div class="confectionery-main-card">
+        <div class="card-pine-trim"></div>
+        <div class="confectionery-card-body">
+          <div class="badge-stamp">
+            <span class="stamp-number">25</span>
+            <span class="stamp-label">RECEITAS</span>
+          </div>
+          <div class="confectionery-card-details">
+            <span class="card-gold-kicker">Material Principal de Confeitaria</span>
+            <h3 class="confectionery-heading">25 Receitas de Doces de Natal</h3>
+            <p class="confectionery-text">
+              Receitas práticas e testadas, com foco em doces natalinos tradicionais e modernos que encantam os clientes, têm fácil saída e deixam a sua mesa de encomendas irresistível.
+            </p>
+            <div class="confectionery-perks">
+              <div class="perk-pill"><span>🍯</span> Doces com apresentação impecável</div>
+              <div class="perk-pill"><span>📋</span> Passo a passo fácil de seguir</div>
+              <div class="perk-pill"><span>🎄</span> Seleção ideal para a época natalina</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bônus Especiais (Estilo Confeitaria Artesanal) -->
+      <div class="bonuses-section-header text-center">
+        <h3 class="bonuses-title">Bônus Exclusivos Para Completar Sua Produção</h3>
+        <p class="bonuses-subtitle">Materiais extras preparados para acompanhar as suas receitas.</p>
+      </div>
+
+      <div class="bonuses-grid">
+        <!-- Bônus 1 -->
+        <div class="bonus-card">
+          <div class="bonus-ribbon">BÔNUS 1</div>
+          <div class="bonus-card-icon">🎁</div>
+          <h4 class="bonus-title">Kit de Divulgação para Vender no Natal</h4>
+          <p class="bonus-text">
+            Materiais e textos prontos para divulgar seus doces no WhatsApp, Instagram e Stories.
+          </p>
+          <div class="bonus-included-tag">Incluso no seu acesso</div>
+        </div>
+
+        <!-- Bônus 2 -->
+        <div class="bonus-card">
+          <div class="bonus-ribbon">BÔNUS 2</div>
+          <div class="bonus-card-icon">🎄</div>
+          <h4 class="bonus-title">Kit de Cardápios de Natal</h4>
+          <p class="bonus-text">
+            Modelos de cardápios de Natal para apresentar seus doces de forma bonita e profissional.
+          </p>
+          <div class="bonus-included-tag">Incluso no seu acesso</div>
+        </div>
+
+        <!-- Bônus 3 -->
+        <div class="bonus-card">
+          <div class="bonus-ribbon">BÔNUS 3</div>
+          <div class="bonus-card-icon">🛒</div>
+          <h4 class="bonus-title">Lista de Compras para Produção</h4>
+          <p class="bonus-text">
+            Checklist para organizar ingredientes, embalagens e materiais necessários para sua produção.
+          </p>
+          <div class="bonus-included-tag">Incluso no seu acesso</div>
+        </div>
+
+        <!-- Bônus 4 -->
+        <div class="bonus-card">
+          <div class="bonus-ribbon">BÔNUS 4</div>
+          <div class="bonus-card-icon">💰</div>
+          <h4 class="bonus-title">Guia de Precificação</h4>
+          <p class="bonus-text">
+            Material para ajudar você a calcular seus custos e definir preços de venda com mais segurança.
+          </p>
+          <div class="bonus-included-tag">Incluso no seu acesso</div>
+        </div>
+      </div>
+
+      <!-- CTA 2 -->
+      <div class="section-cta-box text-center">
+        <a href="https://pay.cakto.com.br/vpncfgw_1176779" class="btn-primary cta-btn" id="cta-content">
+          <span>QUERO GARANTIR AS 25 RECEITAS + BÔNUS</span>
+          <svg class="btn-arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <p class="cta-subtext">Acesso digital imediato liberado após a confirmação</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. DEPOIMENTOS (Estrutura limpa, pronta para receber dados reais) -->
+  <section class="section-testimonials" id="depoimentos">
+    <div class="container">
+      <div class="text-center">
+        <div class="festive-divider">
+          <span class="line"></span>
+          <span class="foliage-symbol">❦</span>
+          <span class="line"></span>
+        </div>
+        <div class="section-tag">Depoimentos Reais</div>
+        <h2 class="section-title">O Que Dizem Quem Já Conhece</h2>
+        <p class="section-subtitle">
+          Veja a experiência de quem já garantiu o material e começou a preparar as encomendas de Natal.
+        </p>
+      </div>
+
+      <!-- Carrossel de Depoimentos Reais -->
+      <div class="testimonials-carousel-wrapper" id="testimonials-carousel-wrapper">
+        <button class="testimonials-carousel-btn prev" id="testimonials-carousel-prev" aria-label="Depoimento anterior">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+
+        <div class="testimonials-carousel-viewport" id="testimonials-carousel-viewport">
+          <div class="testimonials-carousel-track" id="testimonials-carousel-track">
+            <!-- Depoimento 1: Camila com foto de doces preparados -->
+            <div class="testimonials-carousel-slide">
+              <div class="testimonial-image-card">
+                <img src="assets/depoimento-1.jpg" alt="Depoimento Camila - Receitas testadas e encomendas de Natal organizadas" class="testimonial-screenshot-img" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Depoimento 2: Camila Rodrigues -->
+            <div class="testimonials-carousel-slide">
+              <div class="testimonial-image-card">
+                <img src="assets/depoimento-2.jpg" alt="Depoimento Camila Rodrigues - Preparando a produção de doces para o Natal" class="testimonial-screenshot-img" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Depoimento 3: Renata Martins -->
+            <div class="testimonials-carousel-slide">
+              <div class="testimonial-image-card">
+                <img src="assets/depoimento-3.jpg" alt="Depoimento Renata Martins - Planejamento antecipado do cardápio de Natal" class="testimonial-screenshot-img" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="testimonials-carousel-btn next" id="testimonials-carousel-next" aria-label="Próximo depoimento">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+
+      <!-- Indicadores de Navegação do Carrossel de Depoimentos -->
+      <div class="testimonials-carousel-indicators" id="testimonials-carousel-indicators">
+        <button class="testimonials-indicator active" data-index="0" aria-label="Depoimento 1"></button>
+        <button class="testimonials-indicator" data-index="1" aria-label="Depoimento 2"></button>
+        <button class="testimonials-indicator" data-index="2" aria-label="Depoimento 3"></button>
+      </div>
+
+      <div class="testimonials-note text-center">
+        <span>Arraste para o lado ou use as setas para ver mais depoimentos reais.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. GARANTIA & ACESSO VITALÍCIO -->
+  <section class="section-guarantee" id="garantia">
+    <div class="container">
+      <div class="guarantee-card-refined">
+        <div class="guarantee-grid">
+          
+          <!-- Bloco 1: 7 Dias de Garantia -->
+          <div class="guarantee-item">
+            <div class="guarantee-badge-artisan">
+              <span class="badge-icon">🛡️</span>
+              <span class="badge-tag">7 DIAS</span>
+            </div>
+            <div class="guarantee-text-block">
+              <h3 class="guarantee-heading">7 Dias de Garantia</h3>
+              <p class="guarantee-description">
+                Você tem 7 dias para explorar as receitas e materiais com total tranquilidade. Se dentro desse período achar que o produto não é para você, pode solicitar o reembolso de forma simples.
+              </p>
+            </div>
+          </div>
+
+          <!-- Divisor decorativo -->
+          <div class="guarantee-divider"></div>
+
+          <!-- Bloco 2: Acesso Vitalício -->
+          <div class="guarantee-item">
+            <div class="guarantee-badge-artisan gold-theme">
+              <span class="badge-icon">♾️</span>
+              <span class="badge-tag">VITALÍCIO</span>
+            </div>
+            <div class="guarantee-text-block">
+              <h3 class="guarantee-heading">Acesso Vitalício</h3>
+              <p class="guarantee-description">
+                O conteúdo é seu para sempre. Você poderá consultar as receitas neste Natal e nos próximos anos, sem pagar nenhuma mensalidade adicional.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CTA FINAL -->
+  <section class="section-final-cta" id="checkout">
+    <div class="container text-center">
+      
+      <div class="festive-divider festive-divider-light">
+        <span class="line"></span>
+        <span class="foliage-symbol">🎄</span>
+        <span class="line"></span>
+      </div>
+
+      <div class="final-badge-kicker">A Melhor Época do Ano Chegou</div>
+
+      <h2 class="final-cta-title">
+        Aproveite o Natal Para Começar a Vender Doces e Construir a Sua Renda Extra!
+      </h2>
+
+      <p class="final-cta-subtitle">
+        Garanta o seu acesso ao guia completo, comece a planejar suas receitas natalinas e dê o primeiro passo para faturar com encomendas neste fim de ano.
+      </p>
+
+      <div class="final-cta-btn-wrapper">
+        <a href="https://pay.cakto.com.br/vpncfgw_1176779" class="btn-primary btn-large pulse-effect" id="cta-final">
+          <span>QUERO ACESSAR AGORA</span>
+          <svg class="btn-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+
+      <div class="final-trust-list">
+        <div class="trust-chip">
+          <span>🔒</span> Pagamento 100% Seguro
+        </div>
+        <div class="trust-chip">
+          <span>⚡</span> Acesso Imediato
+        </div>
+        <div class="trust-chip">
+          <span>🛡️</span> 7 Dias de Garantia
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p class="footer-title">Renda Extra com Doces de Natal</p>
+      <p class="footer-note">
+        Conteúdo focado em receitas natalinas e organização de produção para confeitaria.
+      </p>
+      <p class="footer-copy">&copy; Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- STICKY BAR MOBILE (CONVERSÃO ELEGANTE) -->
+  <div class="mobile-sticky-cta" id="mobile-sticky-cta">
+    <a href="https://pay.cakto.com.br/vpncfgw_1176779" class="mobile-sticky-pill-btn" id="mobile-sticky-btn">
+      <span>QUERO ACESSAR AGORA →</span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
