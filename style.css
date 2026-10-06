@@ -1392,6 +1392,112 @@ body {
 }
 
 /* ==========================================================================
+   7. DÚVIDAS FREQUENTES (FAQ ACCORDION)
+   ========================================================================== */
+.section-faq {
+  padding: 96px 20px;
+  background-color: #FAF6EF;
+  border-top: 1px solid rgba(200, 153, 51, 0.2);
+}
+
+.faq-container {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.faq-item {
+  background: #FFFFFF;
+  border: 1px solid rgba(11, 34, 26, 0.1);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(11, 34, 26, 0.04);
+  transition: all 0.25s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(200, 153, 51, 0.5);
+  box-shadow: 0 6px 20px rgba(11, 34, 26, 0.08);
+}
+
+.faq-item.active {
+  border-color: var(--c-pine-deep);
+  box-shadow: 0 8px 24px rgba(11, 34, 26, 0.08);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--c-pine-deep);
+  transition: color 0.2s ease;
+}
+
+.faq-question:hover {
+  color: var(--c-bordeaux-rich);
+}
+
+.faq-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: rgba(11, 34, 26, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-pine-deep);
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  background: var(--c-pine-deep);
+  color: #FFFFFF;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  padding: 0 24px;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 0 24px 22px 24px;
+}
+
+.faq-answer p {
+  font-size: 1rem;
+  color: var(--c-text-secondary);
+  line-height: 1.65;
+  margin: 0;
+  border-top: 1px solid rgba(11, 34, 26, 0.06);
+  padding-top: 14px;
+}
+
+.faq-answer strong {
+  color: var(--c-pine-deep);
+}
+
+/* ==========================================================================
    FOOTER
    ========================================================================== */
 .site-footer {

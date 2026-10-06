@@ -226,4 +226,28 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 4. ACCORDION DE DÚVIDAS FREQUENTES (FAQ)
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+    if (questionBtn) {
+      questionBtn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Fecha outros itens para navegação limpa
+        faqItems.forEach(otherItem => {
+          otherItem.classList.remove('active');
+          const otherBtn = otherItem.querySelector('.faq-question');
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+        });
+
+        // Alterna o item clicado
+        if (!isActive) {
+          item.classList.add('active');
+          questionBtn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+  });
 });
