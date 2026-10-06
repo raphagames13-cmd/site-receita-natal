@@ -1841,16 +1841,28 @@ body {
     font-size: 2.25rem;
   }
 
-  /* Botões bem grandes para clique no celular */
+  /* Botões de checkout compactos e proporcionais no celular */
   .btn-primary {
     width: 100%;
-    padding: 20px 24px;
-    font-size: 1.0625rem;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 13px 18px;
+    font-size: 0.9375rem;
+    gap: 8px;
+    border-radius: var(--radius-sm);
   }
 
   .btn-large {
-    font-size: 1.15rem;
-    padding: 22px 24px;
+    max-width: 360px;
+    padding: 14px 20px;
+    font-size: 0.975rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .btn-primary .btn-arrow {
+    width: 18px;
+    height: 18px;
   }
 
   /* Bloco de 4 Bônus no Mobile (Empilhado limpo e fácil de ler) */
