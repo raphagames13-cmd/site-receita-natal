@@ -250,4 +250,52 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  // 5. LIGHTBOX / ZOOM DAS IMAGENS DO PRODUTO (HERO CAROUSEL)
+  const lightboxModal = document.getElementById('image-lightbox-modal');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const lightboxCloseBtn = document.getElementById('lightbox-close-btn');
+  const lightboxBackdrop = document.getElementById('lightbox-backdrop');
+  const heroImages = document.querySelectorAll('.hero-carousel-img');
+
+  const openLightbox = (imgSrc, imgAlt) => {
+    if (!lightboxModal || !lightboxImg) return;
+    lightboxImg.src = imgSrc;
+    lightboxImg.alt = imgAlt || 'Imagem ampliada';
+    if (lightboxCaption) {
+      lightboxCaption.textContent = imgAlt || '';
+    }
+    lightboxModal.classList.add('active');
+    lightboxModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden'; // Evita scroll de fundo
+  };
+
+  const closeLightbox = () => {
+    if (!lightboxModal) return;
+    lightboxModal.classList.remove('active');
+    lightboxModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  heroImages.forEach(img => {
+    img.addEventListener('click', () => {
+      openLightbox(img.src, img.alt);
+    });
+  });
+
+  if (lightboxCloseBtn) {
+    lightboxCloseBtn.addEventListener('click', closeLightbox);
+  }
+
+  if (lightboxBackdrop) {
+    lightboxBackdrop.addEventListener('click', closeLightbox);
+  }
+
+  // Fechar com tecla ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
 });
